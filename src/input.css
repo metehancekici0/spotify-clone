@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html,
+    body,
+    #root {
+        @apply h-full bg-black text-white antialiased
+    }
+
+    #root {
+        @apply flex flex-col p-2
+    }
+
+    .wrapper {
+        height: calc(100% - theme("spacing.20"));
+        @apply flex
+    }
+
+
+    .library {
+        height: calc(100% - 120px);
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #555;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+
+
+}
