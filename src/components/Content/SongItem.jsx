@@ -40,7 +40,7 @@ function SongItem({ item }) {
         <img src={item.image} alt={item.title} className={`w-full aspect-square object-cover ${imageStyle(item)}`} />
         <button
           onClick={updateCurrent}
-          className={`h-12 w-12 flex items-center justify-center rounded-full translate-y-2 group-hover:translate-y-0 bg-primary2 text-black absolute bottom-2 right-2 ${!isCurrentItem ? "opacity-0" : ""} group-hover:opacity-100 transition duration-200 ease-linear hover:bg-primary shadow-lg hover:scale-105 outline-none`}
+          className={`h-12 w-12 flex items-center justify-center rounded-full group-hover:translate-y-0 bg-primary2 text-black absolute bottom-2 right-2 ${!isCurrentItem ? "opacity-0 translate-y-2" : ""} group-hover:opacity-100 transition duration-200 ease-linear hover:bg-primary shadow-lg hover:scale-105 outline-none`}
         >
           <Icon name={isCurrentItem ? "pause" : "play"} size={24} />
         </button>

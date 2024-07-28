@@ -29,7 +29,7 @@ function Sidebar() {
   }, [dropdownIsActive]);
 
   return (
-    <aside className="w-420 flex-shrink-0">
+    <aside className="flex-shrink-0 w-420 xl:w-[280px]">
       <nav className="bg-backdrop rounded-lg">
         <ul className="py-2 px-3">
           <li className="py-1 px-3">
@@ -88,10 +88,12 @@ function Sidebar() {
                 onClick={() => {
                   setDropdownIsActive(!dropdownIsActive);
                 }}
-                className="py-1 px-3 active:scale-100 active:text-link flex gap-1 text-sm text-link items-center hover:text-white hover:scale-105"
+                className="py-1 px-3 xl:px-0 xl:pl-3 active:scale-100 active:text-link flex gap-1 text-sm text-link items-center hover:text-white hover:scale-105"
               >
                 <span>{alignment && alignment}</span>
-                <Icon name="lines" size={16} />
+                {display == "Kompakt" && <Icon name="lines" size={15} />}
+                {display == "Liste" && <Icon name="list" size={15} />}
+                {display == "Tablo" && <Icon name="table" size={15} />}
               </button>
               <div
                 ref={dropdown}

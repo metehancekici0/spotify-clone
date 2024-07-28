@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { getTrackBackground, Range } from "react-range";
 
 function CustomRange({ value, step, min, max, onChange }) {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <Range
       values={[value]}
@@ -10,14 +11,21 @@ function CustomRange({ value, step, min, max, onChange }) {
       max={max}
       onChange={(values) => onChange(values[0])}
       renderTrack={({ props, children }) => (
-        <div onMouseDown={props.onMouseDown} onTouchStart={props.onTouchStart} className="h-7 w-full flex group" style={props.style}>
+        <div
+          onMouseDown={props.onMouseDown}
+          onTouchStart={props.onTouchStart}
+          className="h-7 w-full flex group"
+          style={props.style}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <div
             ref={props.ref}
             className="h-1 w-full rounded-md self-center"
             style={{
               background: getTrackBackground({
                 values: [value],
-                colors: ["#1db954", "#535353"],
+                colors: isHovered ? ["#1db954", "#535353"] : ["#ffffff", "#535353"],
                 min,
                 max,
               }),

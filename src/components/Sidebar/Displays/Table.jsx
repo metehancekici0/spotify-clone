@@ -51,10 +51,10 @@ function Table() {
       <li className="w-1/2">
         <a href="#" className="flex flex-col w-full hover:bg-highlight p-3 rounded-md">
           <div className="w-full aspect-square flex items-center justify-center bg-active mb-2 rounded-full overflow-hidden text-link">
-            <img src="/img/c.webp" className="w-full h-full object-cover" alt="" />
+            <img src="/img/d.jpg" className="w-full h-full object-cover" alt="" />
           </div>
           <div className="flex flex-col">
-            <p className="text-white text-base overflow-ellipsis whitespace-nowrap overflow-hidden">Müslüm Gürses</p>
+            <p className="text-white text-base overflow-ellipsis whitespace-nowrap overflow-hidden">Ahmet Kaya</p>
             <p className="text-link text-sm overflow-ellipsis whitespace-nowrap overflow-hidden">Sanatçı</p>
           </div>
         </a>
@@ -62,10 +62,10 @@ function Table() {
       <li className="w-1/2">
         <a href="#" className="flex flex-col w-full hover:bg-highlight p-3 rounded-md">
           <div className="w-full aspect-square flex items-center justify-center bg-active mb-2 rounded-full overflow-hidden text-link">
-            <img src="/img/c.webp" className="w-full h-full object-cover" alt="" />
+            <img src="/img/e.jpg" className="w-full h-full object-cover" alt="" />
           </div>
           <div className="flex flex-col">
-            <p className="text-white text-base overflow-ellipsis whitespace-nowrap overflow-hidden">Müslüm Gürses</p>
+            <p className="text-white text-base overflow-ellipsis whitespace-nowrap overflow-hidden">Ferdi Tayfur</p>
             <p className="text-link text-sm overflow-ellipsis whitespace-nowrap overflow-hidden">Sanatçı</p>
           </div>
         </a>
